@@ -1,16 +1,16 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
 
-const DB_HOST = "mongodb+srv://kogitonk:sU6LNGjohQsSqraE@cluster0.rv8clre.mongodb.net/?retryWrites=true&w=majority"
+// const {DB_HOST} = process.env;
 
-mongoose.set('strictQuery', true)
+mongoose.set("strictQuery", true);
 
-const app = require('./app')
+const app = require("./app");
 
-mongoose.connect(DB_HOST)
-    .then(() => {
-        app.listen(3000)
-    })
-    .catch(error => {
-        console.log(error.message);
-        process.exit(1)
-    })
+mongoose.connect(process.env.DB_HOST)
+  .then(() => {
+    app.listen(3000);
+  })
+  .catch((error) => {
+    console.log(error.message);
+    process.exit(1);
+  });
