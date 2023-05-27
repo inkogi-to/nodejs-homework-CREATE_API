@@ -15,7 +15,6 @@
     "mon": "^0.0.8",
     "mongoose": "^7.2.1",
     "morgan": "1.10.0",
-    "node": "^20.2.0",
     "nodemon": "^2.0.22"
   },
   "devDependencies": {
@@ -29,5 +28,4 @@
     "moment": "^2.29.4",
     "nanoid": "^3.3.4"
   }
-
 }
